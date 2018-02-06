@@ -19,7 +19,9 @@ import FaIconPack from 'react-icons/lib/fa';
 import FaLinkedin from 'react-icons/lib/fa/linkedin';
 import FaGithub from 'react-icons/lib/fa/github';
 import FaFacebook from 'react-icons/lib/fa/facebook';
-import {sendMessage} from './sendMessage'
+import MdDrafts from 'react-icons/lib/md/drafts'
+//import {sendMessage} from './sendMessage'
+import axios from 'axios';
 
 const containerStyles = {
     container: {
@@ -52,9 +54,10 @@ const containerStyles = {
         textAlign: 'center',
     },
     submitButton: {
-        'float': 'left',
+        
         'margin-top': '30px',
-        'float': 'right',
+        'margin-right': 'auto',
+        'margin-left': 'auto',
     },
     avatar: {
         'margin': '10',
@@ -67,20 +70,34 @@ const containerStyles = {
         // 'margin-right': 'auto',
         // 'margin-left': 'auto',
         // 'max-width': '500px'
+        'background-color': 'white'
+    },
+    link: {
+        'text-decoration':'none',
+        'color': '#0f293d',
+    },
+    h1: {
+        'color': 'whitesmoke',
+        'font-weight': 'lighter'
+    },
+    formControl: {
+        color: 'white'
     }
-};
 
+};
 
 const Footer = () => {
     return (
         //<div style={containerStyles.container}>
-            <div style={containerStyles.container}>
+            <div style={containerStyles.container} id="contact">
                 {/* <h1>console.log( See ya around )</h1> */}
                 <Grid container spacing={24} style={styles.container}>
                     <Grid item xs={12}>
                         <div style={containerStyles.paper}>
-                            <h1>Contact Me</h1>
+                            <h1 style={containerStyles.h1}>Contact Me</h1>
+                            <hr />  
                             <Contact/>
+                            <h2></h2>
                             <Form style={styles.formContainer}/>
                         </div>
                     </Grid>
@@ -97,13 +114,13 @@ const Contact = () => {
         <div>
             <div style={styles.row}>
                 <Avatar style={styles.avatar}>
-                    <FaLinkedin />
+                    <a href="https://linkedin.com/in/seth-olmstead" style={containerStyles.link}><FaLinkedin /></a>
                 </Avatar>
                 <Avatar style={styles.avatar}>
-                    <FaGithub />
+                    <a href="https://github.com/sethsdo/" style={containerStyles.link}><FaGithub /></a>
                 </Avatar>
                 <Avatar style={styles.avatar}>
-                    <FaFacebook />
+                    <a href="https://www.facebook.com/seth.olmstead.5" style={containerStyles.link}><FaFacebook /></a>
                 </Avatar>
             </div>
         </div>
@@ -113,88 +130,16 @@ const Contact = () => {
 
 
 
-class Form extends Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            name: '',
-            contact: '',
-            message: '',
-        };
-    }
-
-    handleChange = prop => event => {
-        this.setState({ [prop]: event.target.value });
-        console.log(this.state)
-    };
-    onSubmit(e) {
-        e.preventDefault();
-        sendMessage(this.state)
-        console.log(this.state)
-    }
-    render() {
+const Form = () => {
 
         return (
             <Grid container spacing={24}>
-                <Grid item xs={12} sm={6}>
-                    {/* <Paper className={containerStyles.paper}> */}
-                        <FormControl fullWidth style={styles.formControl}>
-                            <InputLabel>
-                                Name
-                            </InputLabel>
-                            <Input
-                                id="adornment-name"
-                                value={this.state.name}
-                                onChange={this.handleChange('name')}
-                                endAdornment={<InputAdornment position="end"></InputAdornment>}
-                            />
-                        </FormControl>
-                    {/* </Paper> */}
-                </Grid>
-                <Grid item xs={12} sm={6}>
-                    {/* <Paper className={containerStyles.paper}> */}
-                        <FormControl fullWidth style={styles.formControl}>
-                            <InputLabel>
-                                Email
-                            </InputLabel>
-                            <Input
-                                id="adornment-contact"
-                                value={this.state.contact}
-                                onChange={this.handleChange('contact')}
-                                endAdornment={<InputAdornment position="end"></InputAdornment>}
-                            />
-                        </FormControl>
-                    {/* </Paper> */}
-                </Grid>
-                <Grid item xs={12}>
-                    {/* <Paper className={containerStyles.paper}> */}
-                        <FormControl fullWidth style={styles.formControl}>
-                            <InputLabel>Message</InputLabel>
-                            <Input
-                                id="adornment-message"
-                                value={this.state.message}
-                                onChange={this.handleChange('message')}
-                                endAdornment={<InputAdornment position="end"></InputAdornment>}
-                            />
-                        </FormControl>
-                    {/* </Paper> */}
-                </Grid>
-                
-                <Button raised style={containerStyles.submitButton} onClick={this.onSubmit.bind(this)}>
-                    <i class="material-icons">&#xE163;</i>Send
+                <Button raised style={containerStyles.submitButton} type="submit" id="submit" value="SUBMIT">
+                    <a href="mailto:setholmstead@gmail.com" style={containerStyles.link}><MdDrafts/> Email Me</a>
                 </Button>
             </Grid>
         );
-    }
 }
 
-
-// const Footer = () => {
-//     return (
-//         <div style={styles.container}>
-//             <p>Hello</p>
-//         </div>
-//     );
-// }
 
 export default Footer;

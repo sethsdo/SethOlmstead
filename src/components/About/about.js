@@ -67,7 +67,8 @@ const styles = {
     },
     aboutText: {
         'width': '-webkit-fill-available',
-        padding: 50
+        padding: 50,
+        'color': '#aba8a8'
     },
     content: {
         'display': 'flex',
@@ -80,7 +81,7 @@ const styles = {
 
 const About = () => {
     return (
-        <div style={styles.root}>
+        <div style={styles.root} >
             <Grid container spacing={24}>
 
                 <Paper style={styles.paper1}>
@@ -103,8 +104,9 @@ const About = () => {
                             <h2 style={styles.h2}>SETH OLMSTEAD</h2>
                             <p style={styles.p}>To see the world, things dangerous to come to, to see behind walls, draw closer, to find each other, and to feel. That is the purpose of life <br/> 
                             <br/>
-                            Twenty years from now you will be more disappointed by the things that you didn’t do than by the ones you did do, so throw off the bowlines, sail away from safe harbor, catch the trade winds in your sails. Explore, Dream, Discover. <br/>
-                            —Mark Twain</p>
+                            I am a highly motivated Developer, self-starter, and team-player with expanding expertise in building and deploying applications in multiple languages, frameworks, and libraries . Being naturally positive minded, my can-do attitude allows me too easily adapt to changing environments. Programming is a passion and it's what I do.
+                            <br />
+                            When I'm not working or programming, I can usually be found with my Golden Retriever Lose, hiking outdoors, rock climbing, or enjoying time with family. My favorite board game is Aquire, I consider myself a Coffee connoisseur. I enjoy traveling to new places and am always in search of the next adventure.</p>
                         </div>
                         {/* <Paper style={styles.paper}>xs=12 sm=6</Paper> */}
                     </Grid>

@@ -53,7 +53,7 @@ const styles = {
 const Body = () => {
     return (
         <div >
-            <div style={styles.aboutRoot}>
+            <div style={styles.aboutRoot} id="about">
                 <About />
             </div>
             <div style={styles.exRoot}>

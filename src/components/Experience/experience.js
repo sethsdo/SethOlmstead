@@ -105,7 +105,7 @@ const styles = {
 
 const Experience = () => {
     return (
-        <div style={styles.root}>
+        <div style={styles.root} id="experience">
             <Grid container spacing={24}>
                 
                 <Paper style={styles.paper1}>
@@ -159,7 +159,7 @@ const Experience = () => {
                                 </Avatar>
                             </Avatar>
                             <div style={styles.salutionBox}>
-                                <div style={styles.salutionHeader}><h3>Performence</h3></div>
+                                <div style={styles.salutionHeader}><h3>Performance</h3></div>
                                 <br />
                                 <div style={styles.salutionHeader}>
                                     <p>The greatest performance improvement of all is when a system goes from not-working to working.</p>

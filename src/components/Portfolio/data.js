@@ -10,6 +10,9 @@ import img7 from '../../static/portImg/img7.png'
 import img8 from '../../static/portImg/img8.png'
 import img9 from '../../static/portImg/img9.png'
 import img10 from '../../static/portImg/img10.png'
+import img14 from '../../static/portImg/img14.png'
+import img15 from '../../static/portImg/img15.png'
+import img16 from '../../static/portImg/img16.png'
 import angular from  '../../static/icons/angularjs.png'
 import node from '../../static/icons/node.png'
 import express from '../../static/icons/express.png'
@@ -38,20 +41,20 @@ export const tileData = [
         link: 'https://github.com/sethsdo/audiomania2'
     },
     {
+        img: img14,
+        title: 'Polling Application',
+        author: 'Seth Olmstead',
+        about: 'Build --',
+        png: [mongo, express, node, angular, bootstrap],
+        link: 'https://github.com/sethsdo/Poll_app'
+    },
+    {
         img: img2,
         title: 'Portfoio Site',
         author: 'Seth Olmstead',
         about: 'Build --',
         png: [javascript, angular, material],
         link: 'https://github.com/sethsdo/sethsdo.github.io/tree/master/PortfolioApp'
-    },
-    {
-        img: img3,
-        title: 'Ninja Gold',
-        author: 'Seth Olmstead',
-        about: 'Build --',
-        png: [python, django],
-        link: 'https://github.com/sethsdo/ninja_gold_django'
     },
     {
         img: img4,
@@ -62,12 +65,36 @@ export const tileData = [
         link: 'https://github.com/sethsdo/dojos_and_ninjas'
     },
     {
+        img: img15,
+        title: 'Event Planner',
+        author: 'Seth Olmstead',
+        about: 'Build --',
+        png: [spring, mysql, java, material],
+        link: 'https://github.com/sethsdo/event_belt_reviewer'
+    },
+    {
         img: img5,
         title: 'Quotes App',
         author: 'Seth Olmstead',
         about: 'Build --',
         png: [python, mysql, django, bootstrap, html, css],
         link: 'https://github.com/sethsdo/theDuckishDuke'
+    },
+    {
+        img: img9,
+        title: 'Course Creator',
+        author: 'Seth Olmstead',
+        about: 'Build --',
+        png: [python, django, mysql, bootstrap, html, css],
+        link: 'https://github.com/sethsdo/courses'
+    },
+    {
+        img: img16,
+        title: 'Portfoio Site',
+        author: 'Seth Olmstead',
+        about: 'Build --',
+        png: [javascript, angular, bootstrap],
+        link: 'https://github.com/sethsdo/weather-app-angular'
     },
     {
         img: img6,
@@ -86,20 +113,20 @@ export const tileData = [
         link: 'https://github.com/sethsdo/trip_planner'
     },
     {
-        img: img9,
-        title: 'Course Creator',
-        author: 'Seth Olmstead',
-        about: 'Build --',
-        png: [python, django, mysql, bootstrap, html, css],
-        link: 'https://github.com/sethsdo/courses'
-    },
-    {
         img: img10,
         title: 'Python webpage template',
         author: 'Seth Olmstead',
         about: 'Build --',
         png: [html, css],
         link: 'https://github.com/sethsdo/AboutPythonTemplate'
+    },
+    {
+        img: img3,
+        title: 'Ninja Gold',
+        author: 'Seth Olmstead',
+        about: 'Build --',
+        png: [python, django],
+        link: 'https://github.com/sethsdo/ninja_gold_django'
     },
 
  ];

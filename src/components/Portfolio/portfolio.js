@@ -79,14 +79,20 @@ const styles = {
     },
     rightIcon: {
         
-    }
+    },
+    link: {
+        'text-decoration': 'none',
+        'color': 'white',
+        'font-size': 'x-large',
+        'font-weight': 'lighter'
+    },
 
 }
 
 
 const Portfolio = () => {
     return (
-        <div style={styles.root}>
+        <div style={styles.root} id="portfolio">
             <Grid container spacing={24}>
 
                 <Paper style={styles.paper1}>
@@ -117,7 +123,7 @@ const Portfolio = () => {
                             </CardContent>
                             <CardActions>
                                 <Button size="small" color="primary">
-                                    Learn More<a href={tile.link}></a>
+                                    <a href={tile.link}>Learn More</a>
                                 </Button>
                             </CardActions>
                         </Card>
@@ -125,7 +131,7 @@ const Portfolio = () => {
                 ))}
             </Grid>
             <Button style={styles.button} onClick={redirectToGit} variant="raised" color="default">
-                <a target="_blank" href="https://github.com/sethsdo/">More <FaGithub style={styles.gitButton} /></a>
+                <a target="_blank" href="https://github.com/sethsdo/" style={styles.link}>More <FaGithub style={styles.gitButton} /></a>
             </Button>
         </div>
     )

@@ -64,12 +64,16 @@ const styles = {
     },
     h2Text: {
         'font-weight': 'lighter'
-    }
+    },
+    link: {
+        'text-decoration': 'none',
+        'color': '#0f293d',
+    },
 };
 
 const Header = () => {
         return (
-            <div className="App">
+            <div className="App" >
                 <Appbar/>
                 <Content/>
             </div>
@@ -78,7 +82,7 @@ const Header = () => {
 
 const Content = () => {
     return (
-        <div className={styles.root}>
+        <div className={styles.root} id="home">
             <Grid container spacing={1}>
                 <Grid item xs={12} style={styles.ig}>  
                     <img src={background} style={styles.img}/>
@@ -100,7 +104,7 @@ const HeaderText = () => {
                 <h2 style={styles.h2Text}>Design | Architecture | Performance</h2>
             </div>
             <div style={styles.arrow}>
-                <FaChevronDown style={styles.arrow} />
+                <a href="#about" style={styles.link}><FaChevronDown style={styles.arrow} /></a>
             </div>
         </div>
     )

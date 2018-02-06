@@ -45,7 +45,7 @@ const styles = {
         flex: 1,
     },
     color: {
-        'background-color': 'rgba(128, 128, 128, 0.03)'
+        'background-color': 'rgba(93, 88, 88, 0.28)'
     },
     sideAppbar: {
         'background-color': 'rgb(33, 33, 33)'
@@ -53,6 +53,10 @@ const styles = {
     menuButton: {
         marginLeft: -12,
         marginRight: 20,
+    },
+    link: {
+        'text-decoration': 'none',
+        'color': '#0f293d',
     },
 };
 
@@ -68,7 +72,7 @@ export class Appbar extends React.Component {
     render() {
         return (
 
-            <div style={styles.root}>
+            <div style={styles.root} >
                 <AppBar position="static" style={styles.color}>
                     <Toolbar>
                         <IconButton style={styles.menuButton} color="inherit" aria-label="Menu">
@@ -95,10 +99,11 @@ export class Appbar extends React.Component {
                         </Toolbar>
                     </AppBar>
                     <MenuList>
-                        <MenuItem>About</MenuItem>
-                        <MenuItem>Experience</MenuItem>
-                        <MenuItem>Portfolio</MenuItem>
-                        <MenuItem>Contact</MenuItem>
+                        <MenuItem onClick={this.handleToggle}><a href="#home" style={styles.link}>Home</a></MenuItem>
+                        <MenuItem onClick={this.handleToggle}><a href="#about" style={styles.link}>About</a></MenuItem>
+                        <MenuItem onClick={this.handleToggle}><a href="#experience" style={styles.link}>Experience</a></MenuItem>
+                        <MenuItem onClick={this.handleToggle}><a href="#portfolio" style={styles.link}>Portfolio</a></MenuItem>
+                        <MenuItem onClick={this.handleToggle}><a href="#contact" style={styles.link}>Contact</a></MenuItem>
                     </MenuList>
                 </Drawer>
             </div>

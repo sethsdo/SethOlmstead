@@ -90,7 +90,7 @@ export const tileData = [
     },
     {
         img: img16,
-        title: 'Portfoio Site',
+        title: 'Weather App',
         author: 'Seth Olmstead',
         about: 'Build --',
         png: [javascript, angular, bootstrap],
